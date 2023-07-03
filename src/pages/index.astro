@@ -1,0 +1,344 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Stroke from "../components/Stroke.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<div class="flex">
+			<Header title={SITE_TITLE} />
+			<main>
+				<section class="intro_sec">
+					<div class="ctnr">
+						<div class="content">
+							<h1>
+								<b>Andrei Croitor</b>
+								<!-- <span> Identity Architect, Author of <i>Identity Tools: The Power of Conscious Contrast</i></span> -->
+							</h1>
+
+							<h2>
+								Discover the framework to <strong
+									>make your brand unique</strong
+								>.
+							</h2>
+
+							<div class="cta_ctnr">
+								<a
+									class="cta"
+									href="brand-assessment-questionnaire/index.html"
+									aria-label="Take the Brand Assessment Questionnaire"
+									>Take the Brand Assessment Questionnaire</a
+								>
+
+								<a href="#about">Learn more</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="about_sec">
+					<div class="ctnr">
+						<div class="content">
+							<video
+								class="andrei_video"
+								src="public/the-fundamental-truth-of-business.mp4"
+								controls
+								controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
+								disablePictureInPicture
+								loading="lazy"
+								poster="public/video-cover.webp"
+								playsinline></video>
+
+							<div class="txt" id="about">
+								<p class="big">
+									Hi, I'm <strong>Andrei Croitor</strong>,
+									identity-based branding and creative
+									director at <a href="https://oqva.digital/"
+										>OQVA.digital</a
+									>.
+								</p>
+
+								<p>
+									I've always been fascinated by the way
+									identity shapes our world. Over the years,
+									I've developed three fundamental ideas that
+									have become the core of my branding
+									philosophy:
+								</p>
+
+								<ol>
+									<li>
+										<p>
+											<strong>Conscious Contrast:</strong>
+											Consciousness is nothing but the recognition
+											of contrast.
+										</p>
+									</li>
+									<li>
+										<p>
+											<strong
+												>Compression of Sensation:</strong
+											> Brand is a compressed representation
+											of the carnal sensations which trigger
+											emotions to inspire thought woven into
+											stories that make up a collective of
+											individual identities.
+										</p>
+									</li>
+									<li>
+										<p>
+											<strong>Identity Tools:</strong> The
+											sole purpose of any organisation is to
+											provide the individual tools to build
+											their own identity.
+										</p>
+									</li>
+								</ol>
+
+								<p>
+									<b
+										>These principles are the bedrock of the
+										work I do</b
+									> and by leveraging them, I can help you to navigate
+									the complexities of the market, build a strong
+									brand identity, and secure lasting success.
+								</p>
+
+								<p>
+									<strong
+										>If you're ready to embark on a journey
+										towards a powerful, influential, and
+										successful brand, let's get started.</strong
+									>
+								</p>
+
+								<a
+									class="cta"
+									href="brand-assessment-questionnaire/index.html"
+									aria-label="Take the Brand Assessment Questionnaire"
+									>Improve your Brand Positioning with
+									Identity Tools</a
+								>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="my_philosophy_sec">
+					<div class="ctnr">
+						<div class="content">
+							<q
+								>My philosophy is rooted in the concept that <b
+									><strong>identity tools</strong> are the cornerstone
+									of successful branding</b
+								>. By providing individuals with the tools to
+								build their identity, you empower them to become
+								true brand advocates.
+
+								<!-- <b>Consciousness is formed
+									through recognising contrast</b>, which allows us to create strong and impactful
+								identities that resonate with our target audience. -->
+							</q>
+						</div>
+					</div>
+				</section>
+
+				<section class="framework_sec" id="identity-framework">
+					<div class="ctnr">
+						<div class="content">
+							<div class="txt">
+								<p>
+									I've developed an <strong
+										>Identity Framework</strong
+									> to help you build clear customer avatars and
+									give your brand a competitive edge. This framework
+									will guide you through the process of <b
+										>identifying the key individuals,
+										events, locations, and sacrifices that
+										shape your customers' identities.</b
+									>
+								</p>
+
+								<p>
+									By understanding and leveraging these
+									elements, you can create a <b
+										>powerful connection with your audience</b
+									> and drive your brand's success.
+								</p>
+							</div>
+
+							<div class="box">
+								<p>
+									Give your potential customers what they
+									want, <b>identity</b>. Sacrifice your phone
+									number for a call back explaining the
+									Identity Framework, designed to help you
+									build clear customer avatars and craft a <b
+										>compelling brand story</b
+									>… I promise not to share it with anyone.
+								</p>
+
+								<form
+									id="tel_form"
+									name="framework-phone-contact"
+									method="POST"
+									data-netlify="true"
+								>
+									<p>
+										<input
+											type="tel"
+											name="name"
+											placeholder="Your phone number"
+											required
+										/>
+									</p>
+									<p>
+										<button
+											type="submit"
+											aria-label="Send phone number"
+											>Send</button
+										>
+									</p>
+								</form>
+
+								<span class="response"
+									>Thanks for submitting!</span
+								>
+
+								<script>
+									const response = document.querySelector(
+										".framework_sec .response"
+									);
+
+									const handleSubmit = (event) => {
+										event.preventDefault();
+
+										const myForm = event.target;
+										const formData = new FormData(myForm);
+
+										const telInput =
+											document.querySelector(
+												"#tel_form input"
+											);
+
+										function successTel() {
+											response.style.display = "block";
+
+											setTimeout(() => {
+												telInput.value = "";
+											}, 900);
+										}
+
+										fetch("/", {
+											method: "POST",
+											headers: {
+												"Content-Type":
+													"application/x-www-form-urlencoded",
+											},
+											body: new URLSearchParams(
+												formData
+											).toString(),
+										})
+											.then(() => successTel())
+											.catch((error) => alert(error));
+									};
+
+									document
+										.querySelector("#tel_form")
+										.addEventListener(
+											"submit",
+											handleSubmit
+										);
+								</script>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="blog_sec" id="blog">
+					<div class="ctnr">
+						<div class="content">
+							<div class="title">
+								<h3>Blog</h3>
+								<sub
+									>Cobbling together subjective perspectives
+									to get a <b
+										>glimpse of the objective truth</b
+									>.</sub
+								>
+							</div>
+						</div>
+
+						<div class="blog_posts">
+							{
+								posts.map((post) => (
+									<>
+										<a href={`/blog/${post.slug}/`}>
+											<img
+												src={post.data.heroImage}
+												class="cover"
+												alt="Your brand is compression of sensation, here's why"
+												loading="lazy"
+												width="350"
+												height="400"
+											/>
+											<h4>{post.data.title}</h4>
+										</a>
+									</>
+								))
+							}
+							<!-- <a
+								href="blog/your-brand-is-compression-of-sensation/index.html"
+							>
+								<picture class="cover">
+									<source
+										srcset="public/blog-assets/your-brand-is-compression-of-sensation/cover.webp"
+										type="image/webp"
+										width="350"
+										height="400"
+									/>
+									<source
+										srcset="public/blog-assets/your-brand-is-compression-of-sensation/cover.jpg"
+										type="image/jpeg"
+										width="350"
+										height="400"
+									/>
+									<img
+										src="public/blog-assets/your-brand-is-compression-of-sensation/cover.jpg"
+										alt="Your brand is compression of sensation, here's why"
+										loading="lazy"
+										width="350"
+										height="400"
+									/>
+								</picture>
+
+								<h4>
+									Your brand is <b>compression of sensation</b
+									>, here's why
+								</h4>
+
+								<span class="read_more">Read more</span>
+							</a> -->
+						</div>
+
+						<a href="blog/index.html">Access the full blog</a>
+					</div>
+				</section>
+			</main>
+		</div>
+		<Footer />
+		<Stroke />
+	</body>
+</html>

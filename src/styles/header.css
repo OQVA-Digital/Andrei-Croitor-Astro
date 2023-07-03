@@ -1,0 +1,227 @@
+header {
+    background-color: var(--c2a);
+    width: 100%;
+    min-height: clamp(7rem, 18vw, 8rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex: 0;
+}
+
+header>.ctnr {
+    width: var(--width-mobile);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: clamp(4rem, calc(3.5vw + 4vh), 7rem);
+    /* height: 70%; */
+    /* max-width: 75%; */
+    /* max-height: 70%; */
+}
+
+header .social,
+footer .social {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.6rem, calc(0.9vw + 0.9vh), 1.4rem);
+    justify-content: center;
+}
+
+.social a {
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+header .social a {
+    width: clamp(2rem, calc(3vw + 2.4vh), 3.5rem);
+    min-height: clamp(2rem, calc(3vw + 2.4vh), 3.5rem);
+    border: 0.2rem solid var(--c2);
+    border-radius: 50%;
+    display: block;
+    background-size: 45%;
+    background-color: var(--c2a);
+}
+
+header nav {
+    position: absolute;
+    min-height: 10rem;
+    /* min-width: 30rem; */
+    background-color: rgb(188 224 255 / 80%);
+    display: flex;
+    flex-direction: column;
+    padding: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    gap: 1rem;
+    top: clamp(7rem, 18vw, 8rem);
+    right: 0;
+    left: 0;
+    text-align: center;
+    /* border-radius: 0 0 1.2rem 1.2rem; */
+    /* z-index: 11; */
+    backdrop-filter: blur(0.9rem);
+    border-bottom: 0.1rem solid var(--light);
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    opacity: 0;
+    letter-spacing: 0.04em;
+    visibility: hidden;
+}
+
+header nav.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+header nav a {
+    white-space: nowrap;
+    padding: 0 clamp(2rem, 4vw, 4rem);
+    border-radius: 0.4rem;
+    background-color: var(--c2a);
+    transition: background-color 0.3s ease;
+    border: 0.1rem solid var(--c2a);
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header nav a.icon {
+    width: 4rem;
+    padding: unset;
+    background-size: 50%;
+}
+
+header .icon.mail {
+    background-image: url(../../public/icons/mail.svg);
+}
+
+header nav .flex {
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header nav .flex a:not(.icon) {
+    flex: 1;
+}
+
+header nav a:hover,
+header .social a:hover {
+    background-color: var(--c2);
+    transition: background-color 0.05s ease;
+}
+
+.hambt {
+    width: clamp(3rem, calc(2.5vw + 3vh), 4.5rem);
+    height: calc(clamp(3rem, calc(2.5vw + 3vh), 4.6rem) * 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.social .instagram {
+    background-image: url(../../public/icons/instagram.svg);
+}
+
+.social .twitter {
+    background-image: url(../../public/icons/twitter.svg);
+}
+
+.social .tiktok {
+    background-image: url(../../public/icons/tiktok.svg);
+}
+
+.social .linkedin {
+    background-image: url(../../public/icons/linkedin.svg);
+}
+
+.hambt div {
+    background-color: var(--light);
+    height: 18%;
+    width: 100%;
+    border-radius: 0.2rem;
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+.hambt.close {}
+
+.hambt.close div:nth-child(1) {
+    transform: translateY(220%) rotate(45deg);
+}
+
+.hambt.close div:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.hambt.close div:nth-child(3) {
+    opacity: 0;
+    transform: translateY(-220%);
+}
+
+
+
+@media screen and (min-width: 650px) {
+
+
+
+    header {
+        height: 100vh;
+        height: 100dvh;
+        /* min-width: clamp(11rem, calc(7vw + 6vh), 18rem); */
+        padding: clamp(2rem, 2.5vw, 5rem) 0;
+        /* flex-direction: column; */
+        position: sticky;
+        top: 0;
+        min-width: clamp(11rem, calc(7vw + 6vh), 18rem);
+    }
+
+    header>.ctnr {
+        flex-direction: column;
+        width: unset;
+    }
+
+    .hambt {
+        opacity: 1;
+        transition: opacity 0.1s ease;
+    }
+
+    .hambt:hover {
+        opacity: 0.6;
+    }
+
+    header .social {
+        flex-direction: column;
+        max-height: calc(85vh - 9rem);
+        overflow-y: auto;
+    }
+
+    header nav {
+        left: unset;
+        bottom: 0;
+        top: 0;
+        right: 100%;
+        border-bottom: unset;
+        border-left: 0.1rem solid rgb(250 250 248 / 80%);
+        overflow-y: auto;
+    }
+
+
+
+}
