@@ -92,7 +92,7 @@ picture img {
 
 @font-face {
 	font-family: 'Brandford';
-	src: url('../../public/fonts/Brandford.ttf');
+	src: url('/fonts/Brandford.ttf');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -100,21 +100,21 @@ picture img {
 
 @font-face {
 	font-family: 'Brooklyn';
-	src: url('../../public/fonts/Brooklyn-normal.ttf');
+	src: url('/fonts/Brooklyn-normal.ttf');
 	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Brooklyn';
-	src: url('../../public/fonts/Brooklyn-semibold.ttf');
+	src: url('/fonts/Brooklyn-semibold.ttf');
 	font-weight: 600;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Brooklyn';
-	src: url('../../public/fonts/Brooklyn-bold.ttf');
+	src: url('/fonts/Brooklyn-bold.ttf');
 	font-weight: 800;
 	font-display: swap;
 }
@@ -459,11 +459,11 @@ section>.ctnr {
 
 .intro_sec {
 	background-color: var(--c3);
-	background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), url(../../public/Andrei/andrei01.jpg);
-	background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), -webkit-image-set(url(../../public/Andrei/andrei01-1x.webp) 1x,
-			url(../../public/Andrei/andrei01-2x.webp) 2x,
-			url(../../public/Andrei/andrei01-1x.jpg) 1x,
-			url(../../public/Andrei/andrei01-2x.jpg) 2x);
+	background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), url(/Andrei/andrei01.jpg);
+	background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), -webkit-image-set(url(/Andrei/andrei01-1x.webp) 1x,
+			url(/Andrei/andrei01-2x.webp) 2x,
+			url(/Andrei/andrei01-1x.jpg) 1x,
+			url(/Andrei/andrei01-2x.jpg) 2x);
 	background-position: 56% center;
 	display: flex;
 	flex-direction: column;
@@ -573,11 +573,11 @@ section>.ctnr {
 
 
 .about_sec {
-	/* background-image: url(../../public/Andrei/andrei02-1x.jpg); */
-	/* background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), -webkit-image-set(url(../../public/Andrei/andrei02-1x.webp) 1x,
-            url(../../public/Andrei/andrei02-2x.webp) 2x,
-            url(../../public/Andrei/andrei02-1x.jpg) 1x,
-            url(../../public/Andrei/andrei02-2x.jpg) 2x); */
+	/* background-image: url(/Andrei/andrei02-1x.jpg); */
+	/* background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), -webkit-image-set(url(/Andrei/andrei02-1x.webp) 1x,
+            url(/Andrei/andrei02-2x.webp) 2x,
+            url(/Andrei/andrei02-1x.jpg) 1x,
+            url(/Andrei/andrei02-2x.jpg) 2x); */
 	background-position: 60% center;
 	/* background-attachment: fixed; */
 	background-color: #111111;
@@ -949,11 +949,11 @@ section>.ctnr {
 .blog_sec {
 	/* min-height: clamp(75vh, 15vw, 94vh); */
 	background-color: var(--dark);
-	background-image: url(../../public/Andrei/andrei03.jpg);
-	background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), -webkit-image-set(url(../../public/Andrei/andrei03-1x.webp) 1x,
-			url(../../public/Andrei/andrei03-2x.webp) 2x,
-			url(../../public/Andrei/andrei03-1x.jpg) 1x,
-			url(../../public/Andrei/andrei03-2x.jpg) 2x);
+	background-image: url(/Andrei/andrei03.jpg);
+	background-image: linear-gradient(9deg, var(--c3) 4%, transparent 38%), -webkit-image-set(url(/Andrei/andrei03-1x.webp) 1x,
+			url(/Andrei/andrei03-2x.webp) 2x,
+			url(/Andrei/andrei03-1x.jpg) 1x,
+			url(/Andrei/andrei03-2x.jpg) 2x);
 	background-attachment: fixed;
 }
 
@@ -1018,7 +1018,7 @@ section>.ctnr {
 }
 
 
-.blog_posts {
+.blog_carousel {
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
@@ -1030,14 +1030,14 @@ section>.ctnr {
 	-webkit-mask-image: linear-gradient(90deg, white calc(100% - 8vw), transparent);
 }
 
-.blog_posts a {
+.blog_carousel a {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--dark);
 	border-radius: 1.8rem;
-	min-width: clamp(17rem, calc(20vh + 30vw), 30rem);
+	min-width: clamp(17rem, calc(20vh + 30vw), 38rem);
 	max-width: 40rem;
 	height: clamp(28rem, 100vw, 40rem);
 	max-height: 70vh;
@@ -1059,7 +1059,7 @@ section>.ctnr {
 	overflow: hidden;
 }
 
-.blog_posts a .cover {
+.blog_carousel a .cover {
 	position: absolute;
 	inset: 0;
 	z-index: 0;
@@ -1070,29 +1070,29 @@ section>.ctnr {
 	width: 100%;
 }
 
-.blog_posts a:hover {
+.blog_carousel a:hover {
 	transform: translateY(-0.7rem);
 	transition: transform 0.2s ease, border-color 0.1s ease;
 	border-color: var(--c2);
 }
 
-.blog_posts article:hover .read_more {
+.blog_carousel article:hover .read_more {
 	color: var(--light);
 	transition: color 0.1s ease;
 }
 
-.blog_posts a h4 {
+.blog_carousel a h4 {
 	font-weight: 100;
 	cursor: pointer;
 	position: relative;
 }
 
-.blog_posts a h4 b {
+.blog_carousel a h4 b {
 	color: var(--c2);
 	font-weight: inherit;
 }
 
-.blog_posts a .read_more {
+.blog_carousel a .read_more {
 	position: absolute;
 	bottom: 2.5rem;
 	letter-spacing: 0.5rem;
@@ -1107,15 +1107,15 @@ section>.ctnr {
 	border-bottom: 0.2rem solid var(--c2);
 }
 
-/* .blog_posts a:nth-child(3n + 1) {
+/* .blog_carousel a:nth-child(3n + 1) {
     background-image: url(../blog/placeholders/01.jpg);
 }
 
-.blog_posts a:nth-child(3n + 2) {
+.blog_carousel a:nth-child(3n + 2) {
     background-image: url(../blog/placeholders/02.jpg);
 }
 
-.blog_posts a:nth-child(3n + 3) {
+.blog_carousel a:nth-child(3n + 3) {
     background-image: url(../blog/placeholders/03.jpg);
 } */
 
@@ -1135,6 +1135,27 @@ section>.ctnr {
 
 
 
+
+.social .instagram {
+	background-image: url(/icons/instagram.svg);
+}
+
+.social .twitter {
+	background-image: url(/icons/twitter.svg);
+}
+
+.social .tiktok {
+	background-image: url(/icons/tiktok.svg);
+}
+
+.social .linkedin {
+	background-image: url(/icons/linkedin.svg);
+}
+
+footer .social a:hover {
+	background-color: var(--c2a);
+	transition: background-color 0.05s ease;
+}
 
 
 footer {
@@ -1161,11 +1182,6 @@ footer .social {
 	flex-flow: row wrap;
 }
 
-footer .social a {
-	min-width: 4rem;
-	font-family: 'Brooklyn', sans-serif;
-}
-
 footer .social a,
 footer button {
 	height: 4rem;
@@ -1184,6 +1200,8 @@ footer button {
 }
 
 footer .social a {
+	min-width: 4rem;
+	font-family: 'Brooklyn', sans-serif;
 	padding: 0.3rem 1.5rem 0.3rem 1rem;
 	cursor: pointer;
 	display: flex;
@@ -1194,7 +1212,7 @@ footer .social a {
 }
 
 footer .icon.mail {
-	background-image: url(../../public/icons/mail.svg);
+	background-image: url(/icons/mail.svg);
 	height: 100%;
 	width: 2rem;
 	background-size: contain;
@@ -1402,7 +1420,7 @@ footer .author a {
 		margin-bottom: unset;
 	}
 
-	.blog_posts {
+	.blog_carousel {
 		padding: 3vh clamp(5rem, 8vw, 25rem) clamp(5rem, 15vw, 16rem);
 		width: calc(100vw - clamp(11rem, calc(7vw + 6vh), 18rem));
 		margin: 0 0 0 auto;

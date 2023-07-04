@@ -136,22 +136,6 @@ header .social a:hover {
     cursor: pointer;
 }
 
-.social .instagram {
-    background-image: url(../../public/icons/instagram.svg);
-}
-
-.social .twitter {
-    background-image: url(../../public/icons/twitter.svg);
-}
-
-.social .tiktok {
-    background-image: url(../../public/icons/tiktok.svg);
-}
-
-.social .linkedin {
-    background-image: url(../../public/icons/linkedin.svg);
-}
-
 .hambt div {
     background-color: var(--light);
     height: 18%;

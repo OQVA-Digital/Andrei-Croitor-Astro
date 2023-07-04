@@ -1,11 +1,11 @@
 ---
 title: "Your brand is compression of sensation, here's why"
 description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
-heroImage: "/placeholder-hero.jpg"
+heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
 pubDate: "Jun 30 2021"
 ---
 
-A pretty clear trend in human history is that as we become more technologically advanced, the speed of transfer of information increases. Ancestors alive only a few hundred years ago couldn’t move faster than the speed of a willing horse; and relative to the history of humanity even the willingness of the horse is a rather new development. <b>The last 50 years alone have brought us impossibly interconnected road networks, supersonic flight, and quite literally light-speed, global, communication.
+A pretty clear trend in human history is that as we become more technologically advanced, the speed of transfer of information increases. Ancestors alive only a few hundred years ago couldn’t move faster than the speed of a willing horse; and relative to the history of humanity even the willingness of the horse is a rather new development. The last 50 years alone have brought us impossibly interconnected road networks, supersonic flight, and quite literally light-speed, global, communication.
 
 Compare sending an idea — a simple thought — from London to Tokyo. In the modern world it is something that is certain, guaranteed, and expected. Just grab your personal chunk of magically arranged rock and metal, tap it a few times; and what was in your head is now on the other side of the planet within seconds! A millennium ago it was an almost impossible task with a high chance of failure (see: death).
 
@@ -15,8 +15,8 @@ The ever-increasingly talked about disconnect we love to point at when it comes 
 
 Compression.
 
-Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of information [^1^] [^Cat Videos.^] that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
+Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of information that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
 
 In Buddhist philosophy, the idea that thoughts arise from emotions, which in turn stem from sensations, is part of the teachings on dependent origination. The teachings of Pratītyasamutpāda elucidate the interconnected and interdependent nature of all things; an understanding that acknowledges the fundamental link between our sensory experiences, emotional responses, and the thoughts that emerge as a result.
 
-Here’s a tldr; [^2^] [^Too Long, Didn’t Read;^] we experience sensations — such as sights, sounds, smells, tastes, and tactile stimuli — through the apparatus of our senses. These sensations provide the raw data that our experience is made of, and as we encounter various sensory inputs, our brains are constantly processing and evaluating these experiences in relation to our personal histories, beliefs, and predispositions; namely our past. In doing so, we compress the almost infinite amount of information and attach labels, meaning, and significance to the sensations we perceive. This process gives rise to emotional responses; almost automatic reactions to familiar sets of sensory inputs compressed into an “ideal” image.
+Here’s a tldr; we experience sensations — such as sights, sounds, smells, tastes, and tactile stimuli — through the apparatus of our senses. These sensations provide the raw data that our experience is made of, and as we encounter various sensory inputs, our brains are constantly processing and evaluating these experiences in relation to our personal histories, beliefs, and predispositions; namely our past. In doing so, we compress the almost infinite amount of information and attach labels, meaning, and significance to the sensations we perceive. This process gives rise to emotional responses; almost automatic reactions to familiar sets of sensory inputs compressed into an “ideal” image.

@@ -9,12 +9,12 @@ const shareBt = document.querySelectorAll('.sharebt')
 let shareTitle;
 let shareUrl;
 
-for(i=0;i<shareBt.length;i++) {
-  shareBt[i].addEventListener('click', function() {
-  
-    shareTitle = document.title;
+for (i = 0; i < shareBt.length; i++) {
+  shareBt[i].addEventListener('click', function () {
+
+    shareTitle = "Read Andrei Croitor Blog: " + document.title;
     shareUrl = window.location.href;
-  
+
     if (navigator.share) {
       navigator.share({
         title: shareTitle,
@@ -22,7 +22,7 @@ for(i=0;i<shareBt.length;i++) {
       }).then(() => {
         return;
       })
-      .catch(console.error);
+        .catch(console.error);
     }
   }
   );

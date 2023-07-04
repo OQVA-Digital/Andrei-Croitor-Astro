@@ -1,0 +1,1358 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+// import Footer from "../../components/Footer.astro";
+import Stroke from "../../components/Stroke.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+import "../../styles/brand-assessment-questionnaire.css";
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title="Brand Assessment Questionnaire · Andrei Croitor"
+            description="Boost your brand's success with the Brand Assessment Questionnaire. Please rate your level of confidence with the following statements regarding your brand. Be honest - there's no right or wrong; just truth."
+        />
+
+        <link rel="prefetch" href="/sfx/snap01.mp3" as="audio/mpeg" />
+        <link rel="prefetch" href="/sfx/snap02.mp3" as="audio/mpeg" />
+        <link rel="prefetch" href="/sfx/snap03.mp3" as="audio/mpeg" />
+        <link rel="prefetch" href="/sfx/snap04.mp3" as="audio/mpeg" />
+        <link rel="prefetch" href="/sfx/snap05.mp3" as="audio/mpeg" />
+        <link rel="prefetch" href="/sfx/snap06.mp3" as="audio/mpeg" />
+        <link rel="prefetch" href="/sfx/snap07.mp3" as="audio/mpeg" />
+
+        <script src="../../scripts/rosette-chart.js"></script>
+
+        <script src="../../scripts/brand-assessment-questionnaire.js"></script>
+
+        <script src="../../scripts/form.js"></script>
+
+        <script src="../../scripts/score-url-parameters.js"></script>
+
+        <script src="../../scripts/chart.js"></script>
+    </head>
+
+    <body class="id-framework-body">
+        <main>
+            <section class="intro">
+                <header>
+                    <a href="../index.html" class="logo">
+                        <img
+                            src="/logo/logo-light.svg"
+                            alt="Andrei Croitor Logo"
+                            width="186"
+                            height="66"
+                        />
+                    </a>
+                </header>
+
+                <div class="content">
+                    <h1>
+                        Boost your brand's success with the <strong
+                            >Brand Assessment Questionnaire.</strong
+                        >
+                    </h1>
+
+                    <h2 class="instructions">
+                        <b>Instructions</b>: Please rate your level of
+                        confidence with the following statements regarding your
+                        brand. Be honest - there's no right or wrong; just
+                        truth.
+                    </h2>
+
+                    <a href="#start" class="cta">Let's start</a>
+                </div>
+
+                <div></div>
+            </section>
+
+            <section class="quiz_ctnr" id="start">
+                <form
+                    name="brand-assessment-questionnaire-submission"
+                    method="POST"
+                    data-netlify="true"
+                >
+                    <div class="questions_ctnr">
+                        <div class="progress">
+                            <!-- <div class="overlay"></div> -->
+
+                            <div class="bar"></div>
+
+                            <p class="amount">
+                                <span class="relative">00</span>
+                                of
+                                <span class="total">100</span>
+                            </p>
+                        </div>
+
+                        <fieldset class="visible">
+                            <legend>Conscious Contrast</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >1. Our brand <b>consciously</b> uses contrast
+                                        to differentiate itself from competitors.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="01-our-brand-consciously-uses-contrast-to-differentiate-itself-from-competitors"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title">
+                                        2. We have clearly defined how the brand
+                                        contrasts <b
+                                            >with others in the same market
+                                            space</b
+                                        >.
+                                    </span>
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="02-i-have-clearly-defined-how-my-brand-contrasts-with-others-in-the-same-market-space"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >3. The contrasting elements of our
+                                        brand are <b
+                                            >easily recognised and understood by
+                                            our customers</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="the-contrasting-elements-of-our-brand-are-easily-recognised-and-understood-by-our-customers"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Compression of Sensation</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >4. We evoke sensation <b>and</b> trigger
+                                        emotion as the basis of our communication
+                                        with our customers.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="04-we-evoke-sensation-and-trigger-emotion-as-the-basis-of-our-communication-with-our-customers"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >5. We actively look for <b
+                                            >opportunities to create sensation</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="5-we-actively-look-for-opportunities-to-create-sensation"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >6. <b
+                                            >Our customers refer to sensations</b
+                                        > when describing our brand.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="06-our-customers-refer-to-sensations-when-describing-our-brand"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Identity Tools</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >7. We offer products <b>and</b> services
+                                        that <b
+                                            >our customers use to shape their
+                                            identity</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="07-we-offer-products-and-services-that-our-customers-use-to-shape-their-identity"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >8. Our customers feel a sense of <b
+                                            >belonging and affiliation with each
+                                            other.</b
+                                        ></span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="08-our-customers-feel-a-sense-of-belonging-and-affiliation-with-each-other"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >9. We are more than just a seller of
+                                        products <b>and</b> services; we are a tribe
+                                        that our <b
+                                            >customers willingly sacrifice
+                                            resources</b
+                                        > to be part of.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="09-we-are-more-than-just-a-seller-of-products-and-services-we-are-a-tribe-that-our-customers-willingly-sacrifice-resources-to-be-part-of"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Evoke Sensation</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >10. We have <b
+                                            >conciously defined sensations</b
+                                        > (visual, auditory, tactile) we want our
+                                        customers to associate with the brand.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="10-we-have-conciously-defined-sensations-visual-auditory-tactile-we-want-our-customers-to-associate-with-the-brand"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >11. We actively incorporate these <b
+                                            >sensations into the brand touch
+                                            points</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="11-we-actively-incorporate-these-sensations-into-the-brand-touch-points"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >12. Our customers can instantly <b
+                                            >identify and recall the brand
+                                            through association</b
+                                        > with the sensations.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="12-our-customers-can-instantly-identify-and-recall-the-brand-through-association-with-the-sensations"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Encourage Consciousness</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >13. Our leadership team regularly
+                                        reflect on our <b
+                                            >brand's image and story.</b
+                                        ></span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="13-our-leadership-team-regularly-reflect-on-our-brands-image-and-story"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >14. Our brand's identity is <b
+                                            >consciously and thoughtfully
+                                            implimented</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="14-our-brands-identity-is-consciously-and-thoughtfully-implimented"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >15. Our customers are aware of <b
+                                            >each other's individual identities.</b
+                                        ></span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="15-our-customers-are-aware-of-our-each-others-individual-identities-and-what-we-represent"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Identify Common Individuals</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >16. We have <b
+                                            >consciously defined individuals</b
+                                        > (real or fictional) who exemplify our brand.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="16-we-have-consciously-defined-individuals-real-or-fictional-who-exemplify-our-brand"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >17. Our customers can easily <b
+                                            >relate to these individuals</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="17-our-customers-can-easily-relate-to-these-individuals"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >18. These <b
+                                            >individuals play an active role</b
+                                        > in our brand's community and narrative.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="18-these-individuals-play-an-active-role-in-our-brands-community-and-narrative"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Create Common Events</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >19. We regularly host, participate, <b
+                                            >and</b
+                                        > create events that are <b
+                                            >relevant to our brand and customers</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="19-we-regularly-host-participate-and-create-events-that-are-relevant-to-our-brand-and-customers"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >20. Our customers look forward to and <b
+                                            >actively participate in these
+                                            events</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="20-our-customers-look-forward-to-and-actively-participate-in-these-events"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >21. These events <b
+                                            >contribute to the sense of
+                                            community</b
+                                        > among our customers.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="21-these-events-contribute-to-the-sense-of-community-among-our-customers"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Associate with Common Locations</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >22. Our brand is associated with
+                                        specific locations (physical or digital)
+                                        that <b>have barriers to entry</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="22-our-brand-is-associated-with-specific-locations-physical-or-digital-that-have-barriers-to-entry"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >23. These locations <b
+                                            >define part of the community</b
+                                        > our customers belong to.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="23-these-locations-define-part-of-the-community-our-customers-belong-to"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >24. Our customers <b>feel at home</b> in
+                                        these locations.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="24-our-customers-feel-at-home-in-these-locations"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Provide Common Sacrifices</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >25. Our products or services are not
+                                        just purchases; they are <b
+                                            >sacrifices our customers make to
+                                            affirm their identity.</b
+                                        ></span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="25-our-products-or-services-are-not-just-purchases-they-are-sacrifices-our-customers-make-to-affirm-their-identity"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >26. Our customers perceive <b
+                                            >our offerings as unique and special</b
+                                        >.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="26-26-our-customers-perceive-our-offerings-as-unique-and-special"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >27. Owning or using our
+                                        products/services is seen as a <b
+                                            >symbol of belonging</b
+                                        > to our tribe.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="27-owning-or-using-our-productsservices-is-seen-as-a-symbol-of-belonging-to-our-tribe"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Establish a Common Enemy</legend>
+
+                            <div class="questions">
+                                <label class="statement">
+                                    <span class="title"
+                                        >28. Our brand has clearly defined what <b
+                                            >we are not</b
+                                        > or what we stand against.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="28-our-brand-has-clearly-defined-what-we-are-not-or-what-we-stand-against"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >29. This 'antithesis' is <b
+                                            >easily recognised and accepted</b
+                                        > by our customers.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="29-this-antithesis-is-easily-recognised-and-accepted-by-our-customers"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+
+                                <hr />
+
+                                <label class="statement">
+                                    <span class="title"
+                                        >30. There are <b
+                                            >specific actions our customers can
+                                            take</b
+                                        > to rally against this 'antithesis'.</span
+                                    >
+
+                                    <span class="answer">
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Unsure</span
+                                        >
+
+                                        <input
+                                            class="unset"
+                                            type="range"
+                                            min="1"
+                                            max="5"
+                                            name="30-there-are-specific-actions-our-customers-can-take-to-rally-against-this-antithesis"
+                                            value="1"
+                                        />
+
+                                        <span class="slide_indicator"></span>
+
+                                        <span
+                                            class="range_indicator"
+                                            draggable="false">Confident</span
+                                        >
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="fieldset_controls">
+                        <button
+                            type="button"
+                            class="back disabled"
+                            aria-label="Previous fieldset button">Back</button
+                        >
+
+                        <button
+                            type="button"
+                            class="next"
+                            aria-label="Next fieldset button">Next</button
+                        >
+                    </div>
+
+                    <button
+                        type="button"
+                        aria-label="submit button"
+                        class="reveal cta">Find out your score</button
+                    >
+
+                    <div class="result">
+                        <button class="share_bt" type="button">
+                            <div class="icon"></div>
+                            <span class="hidden">Share your score!</span>
+                        </button>
+
+                        <div class="ctnr">
+                            <h2>
+                                Your score:
+                                <span class="score">
+                                    <span class="current">0</span>
+                                    <span class="total">/</span>
+                                </span>
+                            </h2>
+
+                            <div class="general txt"></div>
+
+                            <!-- <div class="custom txt">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, quis quidem aspernatur itaque impedit deserunt sit cum blanditiis qui. Facilis perferendis deleniti quasi harum facere similique impedit maxime non hic?</p>
+                        </div> -->
+
+                            <div class="chart_ctnr">
+                                <div>
+                                    <canvas id="chart"></canvas>
+                                </div>
+
+                                <ul class="subtitles">
+                                    <li><b>CC</b>Conscious Contrast</li>
+                                    <li><b>CS</b>Compression of Sensation</li>
+                                    <li><b>IT</b>Identity Tools</li>
+                                    <li><b>ES</b>Evoke Sensation</li>
+                                    <li><b>EC</b>Encourage Consciousness</li>
+                                    <li>
+                                        <b>ICI</b>Identify Common Individuals
+                                    </li>
+                                    <li><b>CCE</b>Create Common Events</li>
+                                    <li>
+                                        <b>ACL</b>Associate with Common
+                                        Locations
+                                    </li>
+                                    <li><b>PCS</b>Provide Common Sacrifices</li>
+                                    <li><b>ECE</b>Establish a Common Enemy</li>
+                                </ul>
+                            </div>
+
+                            <div class="contact_form">
+                                <div class="flex">
+                                    <label
+                                        >Name: <input
+                                            type="text"
+                                            name="name"
+                                        /></label
+                                    >
+
+                                    <label
+                                        >Surname: <input
+                                            type="text"
+                                            name="surname"
+                                        /></label
+                                    >
+                                </div>
+
+                                <label
+                                    >Company: <input
+                                        type="text"
+                                        name="company"
+                                    /></label
+                                >
+
+                                <div class="flex">
+                                    <label
+                                        >Phone Number: <input
+                                            type="tel"
+                                            name="phone-number"
+                                        /></label
+                                    >
+
+                                    <label
+                                        >E-mail: <input
+                                            type="email"
+                                            name="email"
+                                        /></label
+                                    >
+                                </div>
+
+                                <div class="score_inputs">
+                                    <input
+                                        id="cc"
+                                        name="cc"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="cs"
+                                        name="cs"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="it"
+                                        name="it"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="es"
+                                        name="es"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="ec"
+                                        name="ec"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="ici"
+                                        name="ici"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="cce"
+                                        name="cce"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="acl"
+                                        name="acl"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="pcs"
+                                        name="pcs"
+                                        type="hidden"
+                                        value="1"
+                                    />
+
+                                    <input
+                                        id="ece"
+                                        name="ece"
+                                        type="hidden"
+                                        value="1"
+                                    />
+                                </div>
+
+                                <input
+                                    id="totalScore"
+                                    name="total-score"
+                                    type="hidden"
+                                    value=""
+                                />
+
+                                <input
+                                    id="userScoreURL"
+                                    name="score-chart-URL"
+                                    type="hidden"
+                                    value=""
+                                />
+
+                                <button
+                                    type="submit"
+                                    class="cta"
+                                    aria-label="submit information"
+                                    >Improve Your Score</button
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <span class="warning require_fields"
+            >Please, answer all the fields.</span
+        >
+
+        <!-- <span class="warning error">Something went wrong. Please, try again later!</span> -->
+        <Stroke />
+    </body>
+</html>

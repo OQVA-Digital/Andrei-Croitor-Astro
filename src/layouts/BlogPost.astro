@@ -3,9 +3,11 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Stroke from "../components/Stroke.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
-import style from "../styles/blog.css";
+import "../styles/blog.css";
+import "../styles/blog-post.css";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -15,43 +17,69 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+
 		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-			.last-updated-on {
-				font-style: italic;
+			h1 {
+				font-size: clamp(2.7rem, calc(3.3vw + 1vh + 1.5rem), 7.5rem);
 			}
 		</style>
+
+		<script src="../scripts/share.js"></script>
 	</head>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				{
-					heroImage && (
-						<img width={720} height={360} src={heroImage} alt="" />
-					)
-				}
-				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
-				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
+	<body class="blog_post">
+		<div class="flex">
+			<Header />
+			<main>
+				<div class="ctnr">
+					<div>
+						<a href="../index.html" class="back">Return blog</a>
+					</div>
+
+					<article>
+						<div class="post_header">
+							{
+								heroImage && (
+									<img
+										width={720}
+										height={360}
+										src={heroImage}
+										alt={title}
+										class="cover"
+									/>
+								)
+							}
+							<div class="content">
+								<h1 class="title">{title}</h1>
+								<h2 class="desc">{description}</h2>
+
+								<button
+									class="sharebt"
+									type="button"
+									data-title="Andrei Croitor Blog Post"
+									data-href="https://oqva.digital"
+									title="Share this post"></button>
+								<!-- <FormattedDate date={pubDate} /> -->
+							</div>
 						</div>
-					)
-				}
-				<hr />
-				<slot />
-			</article>
-		</main>
+						{
+							updatedDate && (
+								<div class="last-updated-on">
+									Last updated on{" "}
+									<FormattedDate date={updatedDate} />
+								</div>
+							)
+						}
+						<hr />
+
+						<div class="txt">
+							<slot />
+						</div>
+					</article>
+				</div>
+			</main>
+		</div>
 		<Footer />
+		<Stroke />
 	</body>
 </html>

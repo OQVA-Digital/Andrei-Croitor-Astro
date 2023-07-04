@@ -7,27 +7,73 @@ html {
     scroll-behavior: unset;
 }
 
+ul, li {
+    list-style: none;
+    padding: unset;
+}
 
-.blog_home h1 {
-    font-size: clamp(5.4rem, calc(7vw + 6vh), 10rem);
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    padding-bottom: clamp(6rem, 10vw, 12rem);
+}
+
+main>.ctnr {
+    width: var(--width-mobile);
+    padding: clamp(2rem, calc(1.5vw + 1.5vh), 6rem) 0 0;
+}
+
+.back {
+    font-size: clamp(1.6rem, 3vw, 1.8rem);
+    display: inline-flex;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    background-color: transparent;
+    position: relative;
+    gap: 1.4rem;
+    left: -1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 0.3rem;
+}
+
+.back::before {
+    content: '';
+    position: relative;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-top: 0.2rem solid;
+    border-left: 0.2rem solid;
+    border-color: var(--light);
+    transform: translate(0.4rem, 0.25em) rotate(-45deg);
+    /* left: -0.6rem; */
+    top: 0.4rem;
+}
+
+.back:hover {
+    background-color: #151515;
+    transition: background-color 0.05s ease;
+}
+
+
+
+
+
+/* h1 {
     line-height: 1;
     font-family: 'Brandford', sans-serif;
     letter-spacing: 0.05em;
-    color: var(--c1);
     width: fit-content;
-    margin: 2rem 0 clamp(1rem, 2vw, 3rem);
     font-weight: 100;
-}
+} */
 
-.blog_home h1 span {
+h1 span {
     font-size: 0.3em;
     width: 10rem;
     display: inline-block;
     color: var(--c3);
     margin-left: -0.5rem;
 }
-
-.blog_post h1 {}
 
 hr {
     margin: clamp(2rem, 12vh, 5rem) 0 clamp(2rem, 12vh, 5rem) 0;
@@ -45,12 +91,16 @@ hr {
     /* mix-blend-mode: unset; */
 }
 
-.post,
+.post a,
 .post_header {
     display: flex;
     flex-direction: column-reverse;
     gap: clamp(2rem, 5vw, 5rem);
     align-items: flex-start;
+}
+
+.post a {
+    margin-bottom: clamp(2rem, 5vw, 10rem);
 }
 
 .post_header {
@@ -61,8 +111,7 @@ hr {
     font-size: clamp(2.7rem, calc(3vw + 2vh + 0.5rem), 5rem);
 }
 
-.post h2,
-.blog_post h1 {
+h1, .post h2 {
     min-width: 40%;
     line-height: 1.05;
     font-weight: 800;
@@ -72,17 +121,13 @@ hr {
     font-weight: 100;
 }
 
-.blog_post h1 {
-    font-size: clamp(2.7rem, calc(3.3vw + 1vh + 1.5rem), 7.5rem);
-}
-
-.blog_post article {
+article {
     position: relative;
 }
 
 .sharebt {
     cursor: pointer;
-    background-image: url(../assets/icons/share.svg);
+    background-image: url(/icons/share.svg);
     width: clamp(2rem, 6vw, 2.8rem);
     height: clamp(2rem, 6vw, 2.8rem);
     background-size: contain;
@@ -142,6 +187,8 @@ hr {
     cursor: pointer;
 }
 
+.post_item {}
+
 .post .content p a {
     text-decoration: underline;
 }
@@ -154,12 +201,14 @@ hr {
     color: var(--c2);
 }
 
-.post .content p {
-    font-size: clamp(1.4rem, calc(1.2vw + 1.4vh), 1.7rem);
+.post .desc, h2.desc {
+    font-size: clamp(1.4rem, calc(1.1vw + 1.2vh), 1.7rem);
     color: #BBB;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.5;
     max-width: 62rem;
+    margin-bottom: 1rem;
+    cursor: inherit;
 }
 
 .post p b {
@@ -186,13 +235,13 @@ hr {
 
 .post h2 strong,
 .post h2 b,
-.blog_post h1 strong,
-.blog_post h1 b {
+h1 strong,
+h1 b {
     color: var(--c1);
     font-weight: 100;
 }
 
-.blog_post article .txt {
+article .txt {
     color: #CCC;
     max-width: 90rem;
     margin: 0 auto;
@@ -205,32 +254,36 @@ hr {
     font-size: clamp(1.6rem, calc(1vw + 1vh), 1.7rem);
 }
 
-.blog_post article .txt b,
-.blog_post article .txt strong {
+article .txt b,
+article .txt strong {
     font-weight: 300;
 }
 
-.blog_post article .txt b {
+article .txt b {
     color: #EEE;
 }
 
-.blog_post article .txt strong {
+article .txt strong {
     color: var(--c1);
 }
 
-.blog_post article .txt p a {
+article .txt p a {
     color: var(--c1);
     text-decoration: underline;
 }
 
-.blog_post article .txt p {
+article .txt h1 {
+    display: none;
+}
+
+article .txt p {
     margin-bottom: 2rem;
     /* text-align: justify; */
     line-height: 1.7;
     letter-spacing: 0.1rem;
 }
 
-.blog_post article .txt p sup, .footnotes sup {
+article .txt p sup, .footnotes sup {
     font-weight: 900;
     color: var(--c2);
     letter-spacing: 0;
@@ -238,11 +291,11 @@ hr {
     cursor: default;
 }
 
-.blog_post .txt .note {
+.txt .note {
     position: relative;
 }
 
-.blog_post .txt .note span {
+.txt .note span {
     position: absolute;
     background-color: var(--dark);
     padding: 0.7rem 1rem;
@@ -258,7 +311,7 @@ hr {
     font-size: clamp(1.6rem, calc(1vw + 1vh), 1.7rem);
 }
 
-.blog_post article .txt .note a {
+article .txt .note a {
     color: unset;
     text-decoration: unset;
 }
@@ -274,8 +327,7 @@ hr {
     margin-bottom: 0.6rem;
 }
 
-.footnotes sup {
-}
+.footnotes sup {}
 
 .next_post {
     width: 100%;
@@ -394,11 +446,21 @@ hr {
 
 
 @media screen and (min-width: 650px) {
+
+    main>.ctnr {
+        width: var(--width-desktop);
+    }
+
     main h3 {
         margin-bottom: unset;
     }
 
-    .post {
+    .post a {
+        flex-flow: row-reverse wrap;
+        gap: clamp(1rem, 2vw, 5rem);
+    }
+
+    .post:first-of-type a {
         flex-flow: row wrap;
     }
 
@@ -420,6 +482,9 @@ hr {
     .post:first-of-type .cover {
         height: clamp(24rem, 30vw, 43rem);
         width: clamp(24rem, 30vw, 43rem);
+        flex: 1;
+        max-width: clamp(24rem, 30vw, 43rem);
+        min-width: 18rem;
     }
 
     .post .cover,
@@ -442,9 +507,9 @@ hr {
         margin-top: 0.8rem;
     }
 
-    .blog_post article .txt p {}
+    article .txt p {}
 
-    .blog_post .txt .note:hover span {
+    .txt .note:hover span {
         display: block;
     }
 

@@ -37,7 +37,7 @@ const posts = (await getCollection("blog")).sort(
 							<div class="cta_ctnr">
 								<a
 									class="cta"
-									href="brand-assessment-questionnaire/index.html"
+									href="/brand-assessment-questionnaire/"
 									aria-label="Take the Brand Assessment Questionnaire"
 									>Take the Brand Assessment Questionnaire</a
 								>
@@ -53,12 +53,11 @@ const posts = (await getCollection("blog")).sort(
 						<div class="content">
 							<video
 								class="andrei_video"
-								src="public/the-fundamental-truth-of-business.mp4"
+								src="/the-fundamental-truth-of-business.mp4"
 								controls
-								controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
-								disablePictureInPicture
-								loading="lazy"
-								poster="public/video-cover.webp"
+								controlslist="nodownload nofullscreen noremoteplayback noplaybackrate"
+								disablepictureinpicture
+								poster="/video-cover.webp"
 								playsinline></video>
 
 							<div class="txt" id="about">
@@ -126,7 +125,7 @@ const posts = (await getCollection("blog")).sort(
 
 								<a
 									class="cta"
-									href="brand-assessment-questionnaire/index.html"
+									href="/brand-assessment-questionnaire/"
 									aria-label="Take the Brand Assessment Questionnaire"
 									>Improve your Brand Positioning with
 									Identity Tools</a
@@ -281,7 +280,7 @@ const posts = (await getCollection("blog")).sort(
 							</div>
 						</div>
 
-						<div class="blog_posts">
+						<div class="blog_carousel">
 							{
 								posts.map((post) => (
 									<>
@@ -289,7 +288,7 @@ const posts = (await getCollection("blog")).sort(
 											<img
 												src={post.data.heroImage}
 												class="cover"
-												alt="Your brand is compression of sensation, here's why"
+												alt={post.data.title}
 												loading="lazy"
 												width="350"
 												height="400"
@@ -340,5 +339,17 @@ const posts = (await getCollection("blog")).sort(
 		</div>
 		<Footer />
 		<Stroke />
+
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", (user) => {
+					if (!user) {
+						window.netlifyIdentity.on("login", () => {
+							document.location.href = "/admin/";
+						});
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
