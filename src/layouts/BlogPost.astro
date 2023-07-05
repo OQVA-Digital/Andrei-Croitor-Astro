@@ -4,14 +4,14 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Stroke from "../components/Stroke.astro";
-import FormattedDate from "../components/FormattedDate.astro";
+// import FormattedDate from "../components/FormattedDate.astro";
 
 import "../styles/blog.css";
 import "../styles/blog-post.css";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, heroImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -62,14 +62,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								<!-- <FormattedDate date={pubDate} /> -->
 							</div>
 						</div>
-						{
+						<!-- {
 							updatedDate && (
 								<div class="last-updated-on">
 									Last updated on{" "}
 									<FormattedDate date={updatedDate} />
 								</div>
 							)
-						}
+						} -->
 						<hr />
 
 						<div class="txt">
