@@ -2,7 +2,6 @@
 title: "Your brand is compression of sensation, here's why"
 description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
 heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
-pubDate: "Jun 30 2021"
 ---
 
 A pretty clear trend in human history is that as we become more technologically advanced, the speed of transfer of information increases. Ancestors alive only a few hundred years ago couldn’t move faster than the speed of a willing horse; and relative to the history of humanity even the willingness of the horse is a rather new development. The last 50 years alone have brought us impossibly interconnected road networks, supersonic flight, and quite literally light-speed, global, communication.
