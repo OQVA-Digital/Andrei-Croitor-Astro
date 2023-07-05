@@ -5,6 +5,16 @@ const blog = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),
+		// Transform string to Date object
+		pubDate: z
+			.string()
+			.optional()
+			.or(z.date())
+			.transform((val) => new Date(val)),
+		updatedDate: z
+			.string()
+			.optional()
+			.transform((str) => (str ? new Date(str) : undefined)),
 		heroImage: z.string().optional(),
 	}),
 });
