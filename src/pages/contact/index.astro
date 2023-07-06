@@ -1,108 +1,113 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Stroke from "../../components/Stroke.astro";
+
+import "../../styles/contact.css";
+import "../../styles/sub-pages.css";
+
+const { title, description } = Astro.props;
+---
+
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <BaseHead title={title} description={description} />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrei Croitor | Contact</title>
+        <script src="../../scripts/form.js"></script>
+    </head>
 
-    <meta name="description" content="Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!">
+    <body>
+        <!-- <header-component></header-component> -->
 
-    <meta name="keywords"
-        content="Branding strategy, Identity tools, Brand consultation, Brand development, Conscious contrast, Customer avatars, Brand storytelling, Brand differentiation, Brand ambassadors, Brand locations, Business branding, Brand loyalty, Brand metrics, Rebranding, Brand voice and tone, Emotional branding, Brand alignment, Brand positioning">
+        <div class="flex">
+            <Header />
 
-    <link rel="stylesheet" href="../styles/defaults.css">
-    <link rel="stylesheet" href="../styles/basic-structure.css">
-    <link rel="stylesheet" href="../styles/sub-pages.css">
-    <link rel="stylesheet" href="../styles/contact.css">
+            <main>
+                <div class="ctnr">
+                    <div>
+                        <a href="/index.html" class="back">Return</a>
 
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+                        <div class="title flex">
+                            <h1>Contact</h1>
 
-    <script src="../scripts/toggle-menu.js" defer></script>
-    <script src="../scripts/stroke-anim.js" defer></script>
-    <script src="../scripts/form.js" defer></script>
-</head>
+                            <div class="social">
+                                <a
+                                    href="https://instagram.com/acroitor"
+                                    target="_blank"
+                                    class="instagram"
+                                    title="Instagram"></a>
 
-<body>
-    <!-- <header-component></header-component> -->
+                                <a
+                                    href="https://twitter.com/andreicroitor"
+                                    target="_blank"
+                                    class="twitter"
+                                    title="Twitter"></a>
 
-    <div class="flex">
-        <header>
-            <div class="ctnr">
-                <button class="hambt" type="button" name="toggle-menu-button">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </button>
+                                <a
+                                    href="https://www.tiktok.com/@a.croitor"
+                                    target="_blank"
+                                    class="tiktok"
+                                    title="TikTok"></a>
 
-                <div class="social">
-                    <a href="https://instagram.com/acroitor" target="_blank" class="instagram" title="Instagram"></a>
-
-                    <a href="https://twitter.com/andreicroitor" target="_blank" class="twitter" title="Twitter"></a>
-
-                    <a href="https://www.tiktok.com/@a.croitor" target="_blank" class="tiktok" title="TikTok"></a>
-
-                    <a href="https://www.linkedin.com/in/andreicroitor/" target="_blank" class="linkedin" title="LinkedIn"></a>
-                </div>
-
-                <a href="../index.html" title="Home · Andrei Croitor">
-                    <img class="logo" src="../assets/logo/logo-pink.svg" alt="">
-                </a>
-
-                <nav>
-                    <a href="../index.html">Home</a>
-
-                    <a href="../index.html#about">About me</a>
-
-                    <a href="../index.html#identity-framework">Identity Framework</a>
-
-                    <a href="../blog/index.html">Blog</a>
-
-                    <a href="../contact/index.html">Contact</a>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <div class="ctnr">
-                <div>
-                    <a href="../index.html" class="back">Return</a>
-
-                    <div class="title flex">
-                        <h1>Contact</h1>
-    
-                        <div class="social">
-                            <a href="https://instagram.com/acroitor" target="_blank" class="instagram" title="Instagram"></a>
-    
-                            <a href="https://twitter.com/andreicroitor" target="_blank" class="twitter" title="Twitter"></a>
-    
-                            <a href="https://www.tiktok.com/@a.croitor" target="_blank" class="tiktok" title="TikTok"></a>
-    
-                            <a href="https://www.linkedin.com/in/andreicroitor/" target="_blank" class="linkedin" title="LinkedIn"></a>
+                                <a
+                                    href="https://www.linkedin.com/in/andreicroitor/"
+                                    target="_blank"
+                                    class="linkedin"
+                                    title="LinkedIn"></a>
+                            </div>
                         </div>
                     </div>
+
+                    <form
+                        class="contact_form"
+                        name="main-contact"
+                        method="POST"
+                        data-netlify="true"
+                    >
+                        <div class="flex">
+                            <p>
+                                <label
+                                    >Your Name <input
+                                        type="text"
+                                        name="name"
+                                        required
+                                    /></label
+                                >
+                            </p>
+
+                            <p>
+                                <label
+                                    >Your Email <input
+                                        type="email"
+                                        name="email"
+                                        required
+                                    /></label
+                                >
+                            </p>
+                        </div>
+
+                        <p>
+                            <label
+                                >Message <textarea name="message" required
+                                ></textarea></label
+                            >
+                        </p>
+
+                        <p>
+                            <button type="submit" class="submit">Submit</button>
+                        </p>
+                    </form>
                 </div>
+            </main>
+        </div>
 
-                <form class="contact_form" name="main-contact" method="POST" data-netlify="true">
-                    <div class="flex">
-                        <p><label>Your Name <input type="text" name="name" required/></label></p>
-    
-                        <p><label>Your Email <input type="email" name="email" required/></label></p>
-                    </div>
+        <Footer />
+        <Stroke />
 
-                    <p><label>Message <textarea name="message" required></textarea></label></p>
-
-                    <p><button type="submit" class="submit">Submit</button></p>
-                </form>
-            </div>
-        </main>
-    </div>
-
-    <!-- <footer-component></footer-component> -->
-
-    <script>
-        document.querySelector('input').focus()
-    </script>
-</body>
-
+        <script>
+            document.querySelector("input").focus();
+        </script>
+    </body>
 </html>

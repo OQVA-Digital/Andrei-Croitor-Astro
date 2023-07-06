@@ -841,6 +841,7 @@ section>.ctnr {
 	padding: 1rem 1.4rem;
 	background-color: var(--c2a);
 	border-radius: 0.3rem;
+	cursor: pointer;
 }
 
 .framework_sec .response {
