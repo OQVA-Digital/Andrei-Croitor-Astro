@@ -401,6 +401,27 @@ function checkProgressBar() {
     }
 }
 
+function checkNextBt() {
+    let y;
+
+    for (y = 0; y < document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length; y++) {
+        if (document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[y].classList.contains('unset')) {
+            nextBt.classList.add('disabled');
+            break
+        }
+
+        if (y == document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length - 1) {
+            if (!document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[y].classList.contains('unset')) {
+                if (formPosition === lastFieldPos) {
+                    nextBt.classList.add('disabled');
+                } else {
+                    nextBt.classList.remove('disabled');
+                }
+            }
+        }
+    }
+}
+
 for (i = 0; i < answers.length; i++) {
 
     maxScore += Number(answers[i].getAttribute('max'))
@@ -415,6 +436,7 @@ for (i = 0; i < answers.length; i++) {
     answers[i].addEventListener("input", (event) => {
         updateThumb(event)
         resultCtnr.classList.add('hidden');
+        checkNextBt()
     });
 
     answers[i].addEventListener("mousedown", updateThumb);
@@ -422,6 +444,7 @@ for (i = 0; i < answers.length; i++) {
     answers[i].addEventListener("touchstart", (event) => {
         updateThumb(event)
         iosPolyfill(event)
+        checkNextBt()
     });
 
     if (!!navigator.platform.match(/iPhone|iPod|iPad/)) {
@@ -477,15 +500,19 @@ function iosPolyfill(event) {
 progressRelative.innerHTML = relativeFilled;
 progressTotal.innerHTML = totalStatements;
 
+function showFillingWarning() {
+    fillingWarning.classList.add('visible')
+
+    setTimeout(() => {
+        fillingWarning.classList.remove('visible')
+    }, 2500);
+}
+
 function calculateScore() {
 
     for (i = 0; i < answers.length; i++) {
         if (answers[i].classList.contains('unset')) {
-            fillingWarning.classList.add('visible')
-
-            setTimeout(() => {
-                fillingWarning.classList.remove('visible')
-            }, 2500);
+            showFillingWarning()
 
             allFilled = false;
             return
@@ -493,7 +520,6 @@ function calculateScore() {
             allFilled = true;
         }
     }
-
 
     const totalScoreInput = document.getElementById('totalScore')
 
@@ -636,18 +662,34 @@ const quizCtnrDistance = window.scrollY + document.querySelector('.quiz_ctnr').g
 
 function checkFieldsets(direction) {
     if (direction == 'forwards') {
-        if (!formFieldsets[lastFieldPos].classList.contains('visible')) {
-            backBt.classList.remove('disabled');
-            formFieldsets[formPosition].classList.remove('visible');
-            formPosition++;
-            formFieldsets[formPosition].classList.add('visible');
 
-            window.scrollTo(0, quizCtnrDistance - (window.innerHeight / 10))
-
-            if (formPosition === lastFieldPos) {
+        for (i = 0; i < document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length; i++) {
+            if (document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[i].classList.contains('unset')) {
+                showFillingWarning()
                 nextBt.classList.add('disabled');
+                break
+            }
+
+            if (i == document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length - 1) {
+                if (document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[i].classList.contains('unset')) {
+                    showFillingWarning()
+                } else {
+                    if (!formFieldsets[lastFieldPos].classList.contains('visible')) {
+                        backBt.classList.remove('disabled');
+                        formFieldsets[formPosition].classList.remove('visible');
+                        formPosition++;
+                        formFieldsets[formPosition].classList.add('visible');
+
+                        window.scrollTo(0, quizCtnrDistance - (window.innerHeight / 10))
+
+                        if (formPosition === lastFieldPos) {
+                            nextBt.classList.add('disabled');
+                        }
+                    }
+                }
             }
         }
+
     } else if (direction == 'backwards') {
         if (!formFieldsets[0].classList.contains('visible')) {
             nextBt.classList.remove('disabled');
@@ -664,6 +706,7 @@ function checkFieldsets(direction) {
 
 nextBt.addEventListener('click', function () {
     checkFieldsets('forwards')
+    checkNextBt()
 })
 
 backBt.addEventListener('click', function () {

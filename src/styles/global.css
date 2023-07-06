@@ -323,7 +323,7 @@ main>.ctnr {
 
 .warning {
 	position: fixed;
-	bottom: 3rem;
+	top: 3rem;
 	left: 0;
 	right: 0;
 	margin-inline: auto;
@@ -336,10 +336,14 @@ main>.ctnr {
 	border-radius: 5rem;
 	border: 0.2rem solid;
 	transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-	transform: translateY(calc(100% + 3rem));
 	opacity: 0;
 	visibility: hidden;
-	color: var(--light)
+	color: var(--light);
+	transform: translateY(calc(-100% - 3rem));
+	-webkit-transform: translateY(calc(-100% - 3rem));
+	-moz-transform: translateY(calc(-100% - 3rem));
+	-ms-transform: translateY(calc(-100% - 3rem));
+	-o-transform: translateY(calc(-100% - 3rem));
 }
 
 .warning.require_fields {
