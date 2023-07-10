@@ -1145,6 +1145,10 @@ section>.ctnr {
 	background-image: url(/icons/instagram.svg);
 }
 
+.social .threads {
+	background-image: url(/icons/threads.svg);
+}
+
 .social .twitter {
 	background-image: url(/icons/twitter.svg);
 }
