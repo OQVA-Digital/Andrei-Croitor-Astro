@@ -14,8 +14,11 @@ As with anything ever[^2], there are two distinct camps; with ideas falling on t
 
 Although it’s easy to frame the first as an ego trip, and the second as… an ego trip in the form of the selfless admission of insignificance, it’s just as easy—and frankly quite necessary—for both to be true. But before we can even begin to discuss the hyper-compressed, multilayered, onion like mess of our own consciousness… we have to simplify, reduce, and distil the concept of consciousness itself to the most basic example accessible for a conversation that doesn’t have the entry requirement of a PHD; 
 
+
 <center>prokaryotes.</center>
 <center><sub>(pro-carry-oats)</sub></center>
+
+
 
 
 Meet Perry[^3]; our very own, personal example of a prokaryote.
