@@ -15,7 +15,7 @@ A stick is an extension of the leverage provided by the arm, and technology as a
 The ever-increasingly talked about disconnect we love to point at when it comes to “modern life” is a direct result of this sensory overload—something that we as a species have already overcome multiple times in our evolutionary history through a mechanism that defines the way we experience reality itself;
 
 
-<center>compression.</center>
+<center>compression.</center><br>
 
 
 Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of information⁠[^1] that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
