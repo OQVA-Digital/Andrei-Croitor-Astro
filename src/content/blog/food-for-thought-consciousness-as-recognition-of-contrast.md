@@ -17,7 +17,7 @@ Although it’s easy to frame the first as an ego trip, and the second as… an 
 
 <center>prokaryotes.</center>
 <center><sub>(pro-carry-oats)</sub></center>
-
+<br>
 
 
 
@@ -37,15 +37,16 @@ Although there is an obvious oversimplification here, it’s not huge! The examp
 
 When combined, these basic senses and the automatic reactions to them make up the apparent consciousness of Perry the Prokaryote—the way he seems to be aware of, and reacts to his world—but when separated each one can be distilled to a binary choice; yes or no. 
 
-Are there hydrogen ions[^5]? Yes or no?
-Oxygen? Yes?
-Photons..?
+Are there hydrogen ions[^5]? Yes or no? <br>
+Oxygen? Yes? <br>
+Photons..? <br>
 
 Each of Perry’s senses can be mapped to a single dimension—a line—with the well defined ideal of the marker—be it a photon, a hydrogen ion, or the molecule for glucose—at one end, and its absence on the other. And although it may seem excruciatingly obvious, it is absolutely necessary to establish that dark—what we collectively agree on as the opposite of light—is the absence of photons, not the presence of something else! 
 
 As we apply this structure to any other sensory input we can get our hands on—exploring the range between a clearly defined ideal and its absolute absence—we come to a realisation. It is impossible to define hot without referring to cold, close without distant, left without right… awareness without ignorance. Consciousness is the space between the two;
 
 <center>consciousness is the recognition of contrast.</center>
+<br>
 
 
 The awareness of the two extremes creating a dimension. The infinity between 0 and 1. The gray between black and white. The distinction between Yin and Yang. 
@@ -63,6 +64,7 @@ Just because Perry doesn’t have the ability to tear my limbs out of their sock
 And so with existential dread rising as a background drumroll, a simple question dawns;
 
 <center>what about us?</center>
+<br>
 
 
 We romanticise and tell tall tales of the desire of humankind, but how different really are we?
