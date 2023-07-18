@@ -490,7 +490,7 @@ article .txt .note a {
     .post_header .content {
         min-width: clamp(10rem, 50vh, 30rem);
         position: sticky;
-        top: 2rem;
+        top: 4rem;
         z-index: 3;
         /* margin-top: 2rem; */
     }
@@ -505,8 +505,8 @@ article .txt .note a {
 
     .post .cover,
     .post_header .cover {
-        height: clamp(24rem, 30vw, 35rem);
-        width: clamp(24rem, 30vw, 35rem);
+        height: clamp(24rem, 30vw, 42rem);
+        width: clamp(24rem, 30vw, 42rem);
         position: relative;
         z-index: 9;
     }
