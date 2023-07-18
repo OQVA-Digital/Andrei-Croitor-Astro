@@ -43,8 +43,7 @@ Each of Perry’s senses can be mapped to a single dimension—a line—with the
 
 As we apply this structure to any other sensory input we can get our hands on—exploring the range between a clearly defined ideal and its absolute absence—we come to a realisation. It is impossible to define hot without referring to cold, close without distant, left without right… awareness without ignorance. Consciousness is the space between the two;
 
-<center>consciousness is the recognition of contrast.</center>
-<br>
+<span class="center bold">consciousness is the recognition of contrast.</span>
 
 
 The awareness of the two extremes creating a dimension. The infinity between 0 and 1. The gray between black and white. The distinction between Yin and Yang. 
@@ -61,8 +60,7 @@ Just because Perry doesn’t have the ability to tear my limbs out of their sock
 
 And so with existential dread rising as a background drumroll, a simple question dawns;
 
-<center>what about us?</center>
-<br>
+<span class="center bold">what about us?</span>
 
 
 We romanticise and tell tall tales of the desire of humankind, but how different really are we?
