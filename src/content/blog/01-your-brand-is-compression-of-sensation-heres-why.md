@@ -16,7 +16,7 @@ The ever-increasingly talked about disconnect we love to point at when it comes 
 
 compression. 
 
-Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of [information⁠](a "Hover text") that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
+Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of [information⁠]("Hover text") that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
 
 In Buddhist philosophy, the idea that thoughts arise from emotions, which in turn stem from sensations, is part of the teachings on dependent origination. The teachings of Pratītyasamutpāda elucidate the interconnected and interdependent nature of all things; an understanding that acknowledges the fundamental link between our sensory experiences, emotional responses, and the thoughts that emerge as a result.
 
