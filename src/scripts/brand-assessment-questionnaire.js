@@ -234,6 +234,8 @@ const paramHideable = document.querySelectorAll('section.intro, .questions_ctnr,
 const scoreDisplay = document.querySelector('.result h2')
 
 function hasParams() {
+    document.querySelector('.result').classList.remove('hidden')
+
     for (i = 0; i < paramHideable.length; i++) {
         paramHideable[i].style.display = 'none'
         // console.log(paramHideable[i])
