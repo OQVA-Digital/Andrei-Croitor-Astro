@@ -50,6 +50,6 @@ As we progress through this book, we will explore the relationship between indiv
 So let’s begin…
 
 ￼
-[^1] Cat Videos.
-[^2] Too Long, Didn’t Read;
-[^3] You can imagine what happens when there’s a compression error; some metaphorical wires get crossed, and you end up wearing a full rubber suit aroused by something seemingly disgusting.
+[^1]: Cat Videos.
+[^2]: Too Long, Didn’t Read;
+[^3]: You can imagine what happens when there’s a compression error; some metaphorical wires get crossed, and you end up wearing a full rubber suit aroused by something seemingly disgusting.
