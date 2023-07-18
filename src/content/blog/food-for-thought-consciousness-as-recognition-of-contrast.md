@@ -57,7 +57,7 @@ We must at this point recognise the subjective nature of the ideal; what constit
 
 Oh! Well… what about the chimp?
 
-As we scale out and see the chimp as this strange amalgamation of prokaryotes, cells, and tissue—all with their respective ideals, dimensions, and drives… the chimp itself becomes a collective of simple consciousnesses forming a complex one! How different is the succulently sweet scent of a ripe banana to the chimp, when compared to however a prokaryote perceives glucose? 
+As we scale out and see the chimp as this strange amalgamation of prokaryotes, cells, and tissue—all with their respective ideals, dimensions, and drives… the chimp itself becomes a collective of simple consciousnesses forming a complex one! How different really is the succulently sweet scent of a ripe banana to the chimp, when compared to however a prokaryote perceives glucose? 
 
 Just because Perry doesn’t have the ability to tear my limbs out of their sockets if I stand between him and the glucose, doesn’t mean he wouldn’t. It seems nothing more than a question of scale…
 
