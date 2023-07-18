@@ -17,6 +17,7 @@ Although it’s easy to frame the first as an ego trip, and the second as… an 
 <center>prokaryotes.</center>
 <center><sub>(pro-carry-oats)</sub></center>
 
+
 Meet Perry[^3]; our very own, personal example of a prokaryote.
 
 Perry is an industrious little E. coli residing in the bustling metropolis of an chimp’s intestine—and our tiny friend is just one of the millions of microbes living in this diverse, thriving, banana loving ecosystem. Every day, Perry goes about his microscopic life, navigating the twists and turns of the intestine, swimming through rivers of partially digested food[^4]; absorbing nutrients from his ever-changing environment. 
@@ -43,6 +44,7 @@ As we apply this structure to any other sensory input we can get our hands on—
 
 <center>consciousness is the recognition of contrast.</center>
 
+
 The awareness of the two extremes creating a dimension. The infinity between 0 and 1. The gray between black and white. The distinction between Yin and Yang. 
 
 The boundary between self and other; and the incessant drive to define it. 
@@ -58,6 +60,7 @@ Just because Perry doesn’t have the ability to tear my limbs out of their sock
 And so with existential dread rising as a background drumroll, a simple question dawns;
 
 <center>what about us?</center>
+
 
 We romanticise and tell tall tales of the desire of humankind, but how different really are we?
 
