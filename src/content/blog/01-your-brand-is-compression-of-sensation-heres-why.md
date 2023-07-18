@@ -16,13 +16,13 @@ The ever-increasingly talked about disconnect we love to point at when it comes 
 
 compression. 
 
-Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of [information⁠](#"Cat Videos.") that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
+Although digital compression is fundamental to our ability to process and transfer the ever-increasing volume of information⁠[^1] that technology exposes us to, the abstract mechanism of compression itself extends far beyond our current WiFi-riddled context; it has always been an essential component of the human experience, one that is ever-present in even the oldest sacred texts and images.
 
 In Buddhist philosophy, the idea that thoughts arise from emotions, which in turn stem from sensations, is part of the teachings on dependent origination. The teachings of Pratītyasamutpāda elucidate the interconnected and interdependent nature of all things; an understanding that acknowledges the fundamental link between our sensory experiences, emotional responses, and the thoughts that emerge as a result.
 
-Here’s a [tldr](#"Too long, didn't read.");⁠ we experience sensations—such as sights, sounds, smells, tastes, and tactile stimuli—through the apparatus of our senses. These sensations provide the raw data that our experience is made of, and as we encounter various sensory inputs, our brains are constantly processing and evaluating these experiences in relation to our personal histories, beliefs, and predispositions; namely our past. In doing so, we compress the almost infinite amount of information and attach labels, meaning, and significance to the sensations we perceive. This process gives rise to emotional responses; almost automatic reactions to familiar sets of sensory inputs compressed into an “ideal” image.
+Here’s a tldr[2];⁠ we experience sensations—such as sights, sounds, smells, tastes, and tactile stimuli—through the apparatus of our senses. These sensations provide the raw data that our experience is made of, and as we encounter various sensory inputs, our brains are constantly processing and evaluating these experiences in relation to our personal histories, beliefs, and predispositions; namely our past. In doing so, we compress the almost infinite amount of information and attach labels, meaning, and significance to the sensations we perceive. This process gives rise to emotional responses; almost automatic reactions to familiar sets of sensory inputs compressed into an “ideal” image.
 
-Emotions are, in essence, the body's way of decompressing a familiar set of sensory data into pre-defined action. For example, when we encounter a set of stimuli that match the compressed “ideal” of threat or danger, our minds and bodies respond by generating feelings of anxiety, fear, or aggression—and a hefty dose of adrenaline. Conversely, when the compressed image is close to the “ideal” of something pleasurable or comforting, we experience emotions we [call happiness, contentment, or joy.](#"You can imagine what happens when there’s a compression error; some metaphorical wires get crossed, and you end up wearing a full rubber suit aroused by something seemingly disgusting.")
+Emotions are, in essence, the body's way of decompressing a familiar set of sensory data into pre-defined action. For example, when we encounter a set of stimuli that match the compressed “ideal” of threat or danger, our minds and bodies respond by generating feelings of anxiety, fear, or aggression—and a hefty dose of adrenaline. Conversely, when the compressed image is close to the “ideal” of something pleasurable or comforting, we experience emotions we [call happiness, contentment, or joy.[3]
 
 In this way, emotions act as a bridge between the raw data of sensation and the resource intensive cognitive processing that occurs within our minds.
 
@@ -46,8 +46,8 @@ As we progress through this book, we will explore the relationship between indiv
 
 So let’s begin…
 
-^1 Cat Videos.^
+[^1]: Cat Videos.
 
-^2 Too Long, Didn’t Read;^
+[^2]: Too Long, Didn’t Read;
 
-^3 You can imagine what happens when there’s a compression error; some metaphorical wires get crossed, and you end up wearing a full rubber suit aroused by something seemingly disgusting.^
+[^3]: You can imagine what happens when there’s a compression error; some metaphorical wires get crossed, and you end up wearing a full rubber suit aroused by something seemingly disgusting.
