@@ -15,10 +15,8 @@ As with anything ever[^2], there are two distinct camps; with ideas falling on t
 Although it’s easy to frame the first as an ego trip, and the second as… an ego trip in the form of the selfless admission of insignificance, it’s just as easy—and frankly quite necessary—for both to be true. But before we can even begin to discuss the hyper-compressed, multilayered, onion like mess of our own consciousness… we have to simplify, reduce, and distil the concept of consciousness itself to the most basic example accessible for a conversation that doesn’t have the entry requirement of a PHD; 
 
 
-<center>prokaryotes.</center>
-<center><sub>(pro-carry-oats)</sub></center>
-<br>
-
+<span class="center bold">prokaryotes.</span>
+<span class="center">(pro-carry-oats)</span>
 
 
 Meet Perry[^3]; our very own, personal example of a prokaryote.
@@ -45,8 +43,7 @@ Each of Perry’s senses can be mapped to a single dimension—a line—with the
 
 As we apply this structure to any other sensory input we can get our hands on—exploring the range between a clearly defined ideal and its absolute absence—we come to a realisation. It is impossible to define hot without referring to cold, close without distant, left without right… awareness without ignorance. Consciousness is the space between the two;
 
-<center>consciousness is the recognition of contrast.</center>
-<br>
+<span class="center bold">consciousness is the recognition of contrast.</span>
 
 
 The awareness of the two extremes creating a dimension. The infinity between 0 and 1. The gray between black and white. The distinction between Yin and Yang. 
@@ -63,8 +60,7 @@ Just because Perry doesn’t have the ability to tear my limbs out of their sock
 
 And so with existential dread rising as a background drumroll, a simple question dawns;
 
-<center>what about us?</center>
-<br>
+<span class="center bold">what about us?</span>
 
 
 We romanticise and tell tall tales of the desire of humankind, but how different really are we?
