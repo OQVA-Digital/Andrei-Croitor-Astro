@@ -1,6 +1,6 @@
 ---
 title: Your brand is compression of sensation, here's why
-description: Your brand is compression of sensation, treat it as such.
+description: ""
 pubDate: Jun 30 2021
 heroImage: /post-covers/your-brand-is-compression-of-sensation.jpg
 ---
