@@ -414,13 +414,11 @@ function checkNextBt() {
         }
 
         if (y == document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length - 1) {
+            alert('A')
             if (!document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[y].classList.contains('unset')) {
-                alert('1')
                 if (formPosition == lastFieldPos) {
-                    alert('2')
                     nextBt.classList.add('disabled');
                 } else {
-                    alert('3')
                     nextBt.classList.remove('disabled');
                 }
             }
