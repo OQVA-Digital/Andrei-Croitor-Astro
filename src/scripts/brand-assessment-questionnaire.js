@@ -448,13 +448,13 @@ for (i = 0; i < answers.length; i++) {
 
     answers[i].addEventListener("touchstart", (event) => {
         updateThumb(event)
-        iosPolyfill(event)
         checkNextBt()
+        // iosPolyfill(event)
     });
 
-    if (!!navigator.platform.match(/iPhone|iPod|iPad/)) {
-        answers[i].addEventListener("touchend", iosPolyfill, { passive: true });
-    }
+    // if (!!navigator.platform.match(/iPhone|iPod|iPad/)) {
+    //     answers[i].addEventListener("touchend", iosPolyfill, { passive: true });
+    // }
 }
 
 
