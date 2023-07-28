@@ -587,13 +587,16 @@ ul, ul li {
     cursor: pointer;
     position: sticky;
     width: clamp(10rem, 85vw, 29rem);
-    display: none;
+    position:absolute;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .reveal.cta.show {
-    display: initial;
     position: sticky;
     bottom: clamp(2rem, 6vmin, 3.5rem);
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -961,7 +964,9 @@ ul, ul li {
 }
 
 .fieldset_controls .back {
-    display: none;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
 } .fieldset_controls .next {
     width: clamp(5rem, 62vw, 25rem);
 }
