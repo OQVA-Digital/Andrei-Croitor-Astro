@@ -439,23 +439,26 @@ for (i = 0; i < answers.length; i++) {
     }
 
     answers[i].addEventListener("input", (event) => {
+        console.log('input')
         updateThumb(event)
         resultCtnr.classList.add('hidden');
         checkNextBt()
     });
 
     answers[i].addEventListener("mousedown",  (event) => {
+        console.log('mousedown')
         updateThumb(event)
         checkNextBt()
     });
 
     answers[i].addEventListener("touchstart", (event) => {
+        console.log('touchstart')
         updateThumb(event)
         iosPolyfill(event)
-        checkNextBt()
     });
 
     if (!!navigator.platform.match(/iPhone|iPod|iPad|MacIntel/)) {
+        console.log('Apple touchend')
         answers[i].addEventListener("touchend", iosPolyfill, { passive: true });
     }
 }
