@@ -399,7 +399,8 @@ function checkProgressBar() {
     if (relativeFilled == 100) {
         progressBar.style.backgroundColor = 'var(--c2a)'
 
-        revealBt.classList.add('stick')
+        revealBt.classList.add('show')
+        nextBt.remove()
     }
 }
 
