@@ -300,13 +300,18 @@ if (url.includes('?')) {
 }
 
 var newURL;
+var urlToUpdate = '';
 
 function updateURL() {
     for (var i = 0; i < scoreHiddenInputs.length; i++) {
-        newURL = updateURLParameter(window.location.href, scoreHiddenInputs[i].id, scoreHiddenInputs[i].value);
-        window.history.replaceState('', '', newURL);
+        newURL = updateURLParameter(urlToUpdate, scoreHiddenInputs[i].id, scoreHiddenInputs[i].value);
+        urlToUpdate = newURL;
     }
-    userScoreURL.value = window.location.href;
+
+    if (relativeFilled == 100) {
+        window.history.replaceState('', '', urlToUpdate);
+        userScoreURL.value = window.location.href;
+    }
 }
 
 
@@ -439,26 +444,26 @@ for (i = 0; i < answers.length; i++) {
     }
 
     answers[i].addEventListener("input", (event) => {
-        console.log('input')
+        // console.log('input')
         updateThumb(event)
         resultCtnr.classList.add('hidden');
         checkNextBt()
     });
 
     answers[i].addEventListener("mousedown",  (event) => {
-        console.log('mousedown')
+        // console.log('mousedown')
         updateThumb(event)
         checkNextBt()
     });
 
     answers[i].addEventListener("touchstart", (event) => {
-        console.log('touchstart')
+        // console.log('touchstart')
         updateThumb(event)
         iosPolyfill(event)
     });
 
     if (!!navigator.platform.match(/iPhone|iPod|iPad|MacIntel/)) {
-        console.log('Apple touchend')
+        // console.log('Apple touchend')
         answers[i].addEventListener("touchend", iosPolyfill, { passive: true });
     }
 }
