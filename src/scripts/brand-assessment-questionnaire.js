@@ -302,11 +302,11 @@ if (url.includes('?')) {
 var newURL;
 
 function updateURL() {
-    for (i = 0; i < scoreHiddenInputs.length; i++) {
+    for (var i = 0; i < scoreHiddenInputs.length; i++) {
         newURL = updateURLParameter(window.location.href, scoreHiddenInputs[i].id, scoreHiddenInputs[i].value);
-        window.history.pushState('', '', newURL);
+        window.history.replaceState('', '', newURL);
     }
-    userScoreURL.value = window.location.href
+    userScoreURL.value = window.location.href;
 }
 
 
