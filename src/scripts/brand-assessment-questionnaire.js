@@ -444,7 +444,10 @@ for (i = 0; i < answers.length; i++) {
         checkNextBt()
     });
 
-    answers[i].addEventListener("mousedown", updateThumb);
+    answers[i].addEventListener("mousedown",  (event) => {
+        updateThumb(event)
+        checkNextBt()
+    });
 
     answers[i].addEventListener("touchstart", (event) => {
         updateThumb(event)
@@ -452,7 +455,7 @@ for (i = 0; i < answers.length; i++) {
         checkNextBt()
     });
 
-    if (!!navigator.platform.match(/iPhone|iPod|iPad/)) {
+    if (!!navigator.platform.match(/iPhone|iPod|iPad|MacIntel/)) {
         answers[i].addEventListener("touchend", iosPolyfill, { passive: true });
     }
 }
