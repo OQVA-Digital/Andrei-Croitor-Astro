@@ -415,7 +415,7 @@ function checkNextBt() {
 
         if (y == document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length - 1) {
             if (!document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[y].classList.contains('unset')) {
-                if (formPosition === lastFieldPos) {
+                if (formPosition == lastFieldPos) {
                     nextBt.classList.add('disabled');
                 } else {
                     nextBt.classList.remove('disabled');
@@ -692,6 +692,8 @@ function checkFieldsets(direction) {
                 }
             }
         }
+        
+        checkNextBt()
 
     } else if (direction == 'backwards') {
         if (!formFieldsets[0].classList.contains('visible')) {
@@ -709,7 +711,6 @@ function checkFieldsets(direction) {
 
 nextBt.addEventListener('click', function () {
     checkFieldsets('forwards')
-    checkNextBt()
 })
 
 backBt.addEventListener('click', function () {
