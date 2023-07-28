@@ -407,15 +407,16 @@ function checkProgressBar() {
 function checkNextBt() {
     let y;
 
-    for (y = 0; y < document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length; y++) {
-        if (document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[y].classList.contains('unset')) {
+    let currentFieldsetInput = document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input');
+
+    for (y = 0; y < currentFieldsetInput.length; y++) {
+        if (currentFieldsetInput[y].classList.contains('unset')) {
             nextBt.classList.add('disabled');
             break
         }
 
-        if (y == document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input').length - 1) {
-            alert('A')
-            if (!document.querySelector('.questions_ctnr fieldset[class="visible"]').querySelectorAll('input')[y].classList.contains('unset')) {
+        if (y == currentFieldsetInput.length - 1) {
+            if (!currentFieldsetInput[y].classList.contains('unset')) {
                 if (formPosition == lastFieldPos) {
                     nextBt.classList.add('disabled');
                 } else {
