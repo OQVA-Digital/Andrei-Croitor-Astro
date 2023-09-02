@@ -3,6 +3,7 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Stroke from "../../components/Stroke.astro";
+import OQVABadge from "../../components/OQVABadge.astro";
 
 import "../../styles/contact.css";
 import "../../styles/sub-pages.css";
@@ -115,5 +116,7 @@ const { title, description } = Astro.props;
         <script>
             document.querySelector("input").focus();
         </script>
+
+        <OQVABadge></OQVABadge>
     </body>
 </html>

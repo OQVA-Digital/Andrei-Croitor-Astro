@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Stroke from "../components/Stroke.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import OQVABadge from "../components/OQVABadge.astro";
 
 import "../styles/blog.css";
 import "../styles/sub-pages.css";
@@ -81,5 +82,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</div>
 		<Footer />
 		<Stroke />
+
+		<OQVABadge></OQVABadge>
 	</body>
 </html>
